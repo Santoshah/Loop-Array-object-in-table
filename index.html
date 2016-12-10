@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<title>Javasciprt Closure eg1</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+
+	<!-- <script src="js/script.js"></script> -->
+
+
+</head>
+<body ng-app="myModule" ng-controller="myController">
+
+<p id="demo"></p>
+<script>
+var person = [{
+    firstName: "John",
+    lastName : "Doe",
+    id       :  5566
+},{
+    firstName: "santosh",
+    lastName : "kumar",
+    id       :  96
+},];
+var item, text;
+
+text="<table>";
+text+="<thead><tr><th>First Name</th><th>Last Name</th><th>id</th></tr>";
+
+ for(var i=0; i<person.length; i++) {
+
+        text += "<tr><td>"+person[i].firstName+"</td><td>"+person[i].lastName+"</td>"+"<td>"+person[i].id+"</td></tr>";
+}
+text+= "</table>";
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+</body>
+</html>
